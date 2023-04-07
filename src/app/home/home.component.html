@@ -1,0 +1,30 @@
+<div id="main-container">
+
+    <div id="search">
+        <input type="text" name="search" placeholder="Search Product" [(ngModel)]="search">
+       
+        <button mat-mini-fab (click)="searchItem()"><mat-icon>search</mat-icon>
+        </button>
+
+    </div>
+    <div *ngFor="let product of products">
+        <div id="single-item" (click)="productdetail(product.id)">
+            <img src="{{product.image}}" alt="">
+            <div>
+                <p>{{product?.name}}</p>
+                <p>{{product?.description}}</p>
+            </div>
+            
+           
+        </div>
+        
+    </div>
+    <div id="pager">
+        <p><button mat-mini-fab (click)="previous()">
+            <mat-icon>arrow_left_alt</mat-icon>
+        </button><span>  Showing Results {{from+1}} to {{to}} of {{total}}   </span><button mat-mini-fab (click)="next()">
+            <mat-icon>arrow_right</mat-icon>
+        </button></p>
+    </div>
+
+</div>

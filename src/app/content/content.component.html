@@ -1,0 +1,24 @@
+<div id="main-container">
+
+    <div id="search">
+        <input type="text" name="search" placeholder="Search Product" [(ngModel)]="search">
+       
+        <button mat-mini-fab (click)="searchItem()"><mat-icon>search</mat-icon>
+        </button>
+
+    </div >
+    <div *ngFor="let product of productList" appScroll>
+        <div class="single-item" id="{{product.id}}" (click)="productdetail(product.id)">
+            <img src="{{product.image}}" alt="">
+            <div>
+                <p>{{product?.name}}</p>
+                <p>{{product?.description}}</p>
+            </div>
+            
+           
+        </div>
+        
+    </div>
+    
+
+</div>
