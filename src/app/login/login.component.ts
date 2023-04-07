@@ -14,12 +14,13 @@ export class LoginComponent {
   constructor(private form : FormBuilder, private loginService : LoginService, private route :RouteService){}
 
   loginDetails = this.form.group({
+
     email : ['',Validators.required],
-    password : ['', Validators.required]
+    password : ['', Validators.required,Validators.minLength(2)]
   })
 
-  getEmail(){return this.loginDetails.get('email')}
-  getPassword(){ return this.loginDetails.get('password')}
+  get email(){return this.loginDetails.get('email')}
+  get password(){ return this.loginDetails.get('password')}
 
   login(){
     console.log(this.loginDetails.value)

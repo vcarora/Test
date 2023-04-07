@@ -6,24 +6,24 @@
             <input type="email" matInput placeholder="Email Id" name="email" formControlName="email">
 
         </mat-form-field>
-        <!-- <div *ngIf="(email?.touched && email.invalid)">
-            <div *ngIf="email?.errors?.['required']">
-                <p>Email Is required</p>
-            </div>
-        </div> -->
+         <mat-error *ngIf="(email?.touched && email?.invalid && email?.errors?.['required'])">
+             Email is required.
+          </mat-error>
        
         <mat-form-field appearence="outline">
             <mat-label>Password</mat-label>
             <input type="password" matInput name="password" placeholder="Password" formControlName="password">
 
         </mat-form-field>
-        <!-- <div *ngIf="(password?.touched)">
-            <div *ngIf="password?.errors?.['required']">
-                <p>Password Is required</p>
-            </div>
-        </div> -->
+        <mat-error *ngIf="password?.touched && password?.errors?.['required']">
+            Password is required.
+         </mat-error>
+      
        
-       <button mat-raised-button color="primary" type="submit" >Login</button>
+       <button mat-raised-button color="primary" [disabled]="!loginDetails.valid" type="submit" >Login</button>
+       <button color="primary" mat-button mat-raised-button [disabled]="!loginDetails.valid"
+       type="submit">Submit</button>
+
 
     </form>
 </div>
