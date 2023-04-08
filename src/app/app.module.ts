@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from '@angular/forms';
 import { ScrollDirective } from './scroll.directive';
 import { ContentComponent } from './content/content.component';
+import { ImgDirective } from './img.directive';
 
 
 
@@ -26,7 +27,8 @@ import { ContentComponent } from './content/content.component';
     HomeComponent,
     DescriptionComponent,
     ScrollDirective,
-    ContentComponent
+    ContentComponent,
+    ImgDirective
   ],
   imports: [
     BrowserModule,

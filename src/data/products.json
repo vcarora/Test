@@ -4,13 +4,13 @@
         "id": 1,
         "name": "Mobile",
         "description": "Android Smart Phone",
-        "image" : "../../assets/images/snack.png"
+        "image" : "../../assets/images/sd.png"
       },
       {
         "id": 2,
         "name": "Watch ",
         "description": "Rolex Laptop",
-        "image" : "../../assets/images/snack.png"
+        "image" : "../../assets/images/sd.png"
       },{
         "id": 3,
         "name": "Mobile",

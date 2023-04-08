@@ -9,7 +9,7 @@
     </div>
     <div *ngFor="let product of products">
         <div id="single-item" (click)="productdetail(product.id)">
-            <img src="{{product.image}}" alt="">
+            <img src="{{product.image}}" appImg="../../assets/images/roposo.png">
             <div>
                 <p>{{product?.name}}</p>
                 <p>{{product?.description}}</p>
